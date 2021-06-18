@@ -3,8 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import {useState} from "react";
 import ErrorModal from "../UI/ErrorModal";
-import Wrapper from "../Helpers/Wrapper";
-
+import React from "react";
 const AddUser = (props) => {
   const [enterdUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
@@ -48,7 +47,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <Wrapper>
+    <React.Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -75,7 +74,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </Wrapper>
+    </React.Fragment>
   );
 };
 
